@@ -34,9 +34,9 @@ public class DependencyInjector : MonoBehaviour, IDependencyInjector
     {
         var builder = new ContainerBuilder();
 
-        // here you configure the all the dependencies and its implementations
-        builder.RegisterType<RandomNumberGenerator>().As<INumberGenerator>().SingleInstance();
-        
+        var dependencyConfiguration = new DependencyConfiguration(builder);
+        dependencyConfiguration.ConfigureDependencies();
+
         return builder.Build();
     }
 

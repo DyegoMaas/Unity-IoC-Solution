@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{289B1C9B-6153-1CEE-11D7-CE812E552809}</ProjectGuid>
+	<ProjectGuid>{2B57BB3A-7349-4C13-DE34-42F5259A37AF}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,20 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Example\CubeSpawner.cs" />
-     <Compile Include="Assets\Example\INumberGenerator.cs" />
-     <Compile Include="Assets\Example\RandomNumberGenerator.cs" />
-     <Compile Include="Assets\Example\RandomNumberOfCubesUnityInterface.cs" />
-     <Compile Include="Assets\IoC\DependencyInjector.cs" />
-     <Compile Include="Assets\IoC\IDependencyInjector.cs" />
-     <Compile Include="Assets\IoC\InjectedDependencyAttribute.cs" />
-     <Compile Include="Assets\IoC\InjectionBehaviour.cs" />
-     <Compile Include="Assets\IoC\ReflectionInjection.cs" />
-     <None Include="Assets\IoC\Autofac License.txt" />
-     <None Include="Assets\IoC\Autofac.xml" />
-     <None Include="Assets\IoC\License.txt" />
+     <Compile Include="Assets\Unity-IoC-Solution\Example\CubeSpawner.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\Example\INumberGenerator.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\Example\RandomNumberGenerator.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\Example\RandomNumberOfCubesUnityInterface.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\DependencyConfiguration.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\DependencyInjector.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\IDependencyInjector.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\InjectedDependencyAttribute.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\MonoBehaviourInjectionExtension.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\ReflectionInjection.cs" />
+     <None Include="Assets\Unity-IoC-Solution\IoC\Autofac License.txt" />
+     <None Include="Assets\Unity-IoC-Solution\IoC\Autofac.xml" />
+     <None Include="Assets\Unity-IoC-Solution\IoC\License.txt" />
  <Reference Include="Autofac">
- <HintPath>Assets\IoC\Autofac.dll</HintPath>
+ <HintPath>Assets\Unity-IoC-Solution\IoC\Autofac.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

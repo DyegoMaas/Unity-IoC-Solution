@@ -6,15 +6,17 @@ using System.Collections;
 /// If multiple scripts need to use the same instance of a injected property, 
 /// you can configure the order in wich they will execute in Edit -> Project Settings -> Script Execution Order
 /// </summary>
-public class RandomNumberOfCubesUnityInterface : InjectionBehaviour {
+public class RandomNumberOfCubesUnityInterface : MonoBehaviour {
 
     [InjectedDependency] private INumberGenerator numberGenerator;
 
     public int min = 3;
     public int max = 10;
 
-    protected override void StartOverride()
+    void Start()
     {
+        this.InjectDependencies();
+
         numberGenerator.Min = min;
         numberGenerator.Max = max;
     }

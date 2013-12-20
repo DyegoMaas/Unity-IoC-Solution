@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// Your scripts must extend InjectionBehaviour in order to have automatic dependecy injection
-public class CubeSpawner : InjectionBehaviour
+public class CubeSpawner : MonoBehaviour
 {
     [InjectedDependency] private INumberGenerator numberGenerator;
-
-    // You must implement StartOverride() because Start() is used in by the superclass InjectionBehaviour
-    // StartOverride() is called at the end of Start(), after the dependencies were injected
-    protected override void StartOverride()
+    
+    void Start()
     {
+        this.InjectDependencies();
+
         int numberOfCubes = numberGenerator.GenerateNumberOfCubes();
         StartCoroutine(SpawnCubes(numberOfCubes));
     }
