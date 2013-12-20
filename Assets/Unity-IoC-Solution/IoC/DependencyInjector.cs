@@ -1,5 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Reflection;
 using Autofac;
 using UnityEngine;
+using System.Linq;
+using UnityIoCSolution;
 
 /// <summary>
 /// The IoC container used is Autofac (version 2.6.3 for .NET 3.5). 
@@ -34,10 +39,20 @@ public class DependencyInjector : MonoBehaviour, IDependencyInjector
     {
         var builder = new ContainerBuilder();
 
-        var dependencyConfiguration = new DependencyConfiguration(builder);
-        dependencyConfiguration.ConfigureDependencies();
+        var configurations = FindImplementationsOf<IDependencyInstaller>();
+        foreach (var dependencyConfiguration in configurations)
+        {
+            dependencyConfiguration.ConfigureDependencies(builder);
+        }
 
         return builder.Build();
+    }
+
+    private static IEnumerable<T> FindImplementationsOf<T>()
+    {
+        return from type in Assembly.GetCallingAssembly().GetTypes()
+               where typeof(T).IsAssignableFrom(type) && type.IsClass
+               select (T)Activator.CreateInstance(type);
     }
 
     public void Inject(object instance)

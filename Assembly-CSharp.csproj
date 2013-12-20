@@ -47,12 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Unity-IoC-Solution\Example\CubeSpawner.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\Example\ExampleInstaller.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\Example\INumberGenerator.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\Example\RandomNumberGenerator.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\Example\RandomNumberOfCubesUnityInterface.cs" />
-     <Compile Include="Assets\Unity-IoC-Solution\IoC\DependencyConfiguration.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\IoC\DependencyInjector.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\IoC\IDependencyInjector.cs" />
+     <Compile Include="Assets\Unity-IoC-Solution\IoC\IDependencyInstaller.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\IoC\InjectedDependencyAttribute.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\IoC\MonoBehaviourInjectionExtension.cs" />
      <Compile Include="Assets\Unity-IoC-Solution\IoC\ReflectionInjection.cs" />

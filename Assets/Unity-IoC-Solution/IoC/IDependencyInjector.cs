@@ -1,4 +1,7 @@
-public interface IDependencyInjector
+namespace UnityIoCSolution
 {
-    void Inject(object instance);
+    public interface IDependencyInjector
+    {
+        void Inject(object instance);
+    }
 }
