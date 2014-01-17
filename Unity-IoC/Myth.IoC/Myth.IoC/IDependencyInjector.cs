@@ -1,4 +1,4 @@
-namespace UnityIoCSolution
+namespace Myth.IoC
 {
     public interface IDependencyInjector
     {

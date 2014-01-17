@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 
-namespace UnityIoCSolution
+namespace Myth.IoC
 {
     /// <summary>
     /// Injects the dependencies via reflection

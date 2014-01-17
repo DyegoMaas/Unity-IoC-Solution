@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Autofac;
+using Myth.IoC;
 using UnityEngine;
 using System.Linq;
-using UnityIoCSolution;
 
 /// <summary>
 /// The IoC container used is Autofac (version 2.6.3 for .NET 3.5). 
